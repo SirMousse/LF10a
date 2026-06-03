@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anchor-Tags (Links)</title>
+    </head>
+    
+    <body>
+        <header>
+            <h1>Anchor-Tags (&lt;a&gt;) - Links in HTML</h1>
+
+            <p>
+                Mit den Anchor-Tags können wir Links erstellen. Links führen zu anderen Seiten, Dateien oder zu einer 
+                Stelle auf derselben Seite.
+            </p>
+        </header>
+
+        <hr>
+
+        <main>
+            <section id="ziel">
+                <h2>1. Grundaufbau eines Links</h2>
+                <p>So sieht ein einfacher Link im Code aus:</p>
+
+                <pre>
+                    &lt;a href="https://www.google.com"&gt;Ich bin ein Link&lt;/a&gt; 
+                </pre>
+
+                <pre>
+                 /\_/\\
+                ( o.o )
+                 > ^ <
+                </pre>
+
+                <p>So sieht der Link im Browser aus:</p>
+                <a href="https://www.google.com">Ich bin ein Link</a>
+            </section>
+
+            <section>
+                <h2>2. Das Attribut href</h2>
+
+                <p>
+                    href steht für Hypertext Refrence. Das Attribut href gibt an, wohin der Link führt.
+                    Ohne href ist es KEIN richtiger Link! 
+                </p>
+
+                <ul>
+                    <li><code>href="./010_hallo.html"</code> → Link zu einer Datei im gleichen Ordner</li>
+                    <li><code>href="../010_hallo.html"</code> → Link zu einer Datei in einem übergeordneten Verzeichnis</li>
+                    <li><code>href="../../010_hallo.html"</code> → Link zu einer Datei in einem übergeordneten Verzeichnis</li>
+                    <li><code>href="/010_hallo.html"</code> → Startet im Hauptverzeichnis der Webseite (Root)</li>
+                    <li><code>href="#ziel"</code> → Link zu einer Stelle auf derselben Seite</li>
+                    <li><code>href="https://www.google.com"</code> → Link der zu einer anderen Webseite führt</li>
+                </ul>
+
+            </section>
+
+            <section>
+                <h2>3. Link in einem neuen Tab öfnen</h2>
+
+                <p>
+                    Mit <code>target="_blank"</code> öffnet sich der Link in einem neuen Tab:
+                </p>
+
+                <pre>
+                    &lt;a href="https://www.google.com" target="_blank" rel="noopener noreferrer&gt;Ich bin ein Link&lt;/a&gt;
+                </pre>
+
+                <p>So sieht ein Link im Browser aus:</p>
+
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Ich bin ein Link</a>
+
+                <p>
+                    <strong>noopener</strong><br>
+                    Sicherheit bei <code>target="_blank"</code>, das die Zielseite, meine Seite NICHT manipulieren kann.
+                </p>
+
+                <p>
+                    <strong>noreferrer</strong><br>
+                    Datenschutz, bedeutet die Zielseite sieht NICHT, von welcher Seite der Klick kam.
+                </p>
+
+                <p>
+                    <strong>rel</strong><br>
+                    eng. relationship / dt. Beziehung
+                    
+                </p>
+            </section>
+        </main>
+    </body>
+</html>
