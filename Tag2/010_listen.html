@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listen in HTML</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Listen im HTML</h1>
+
+            <p>
+                In diesem Abschnitt kann ich alles über verschiedene Listen nachlesen. HTML kennt: <br>
+                <strong>&lt;ol&gt;</strong> (sortierte Listen), 
+                <strong>&lt;ul&gt;</strong> (unsortierten Listen) und
+                <strong>&lt;dl&gt;</strong> (beschreibenden Listen).
+            </p>
+        </header>
+
+        <main>
+
+            <section>
+                <h2>1. Wann nutzen wir welche Liste?</h2>
+
+                <ul>
+                    <li><strong>&lt;ol&gt;</strong>: Wenn die Reihenfolge wichtig ist (z.B.: Rangliste, Anleitung, Rezept)</li>
+                    <li><strong>&lt;ul&gt;</strong>: Wenn die Reihefolge egal ist (z.B.: Stichpunkte, Einkaufsliste, To-Do Liste)</li>
+                    <li><strong>&lt;dl&gt;</strong>: Für Begriffe mit Erklärungen (z.B.: Glossar, FAQ, Wörterbuch)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. Sortierte Liste (&lt;ol&gt;)</h2>
+
+                <p>
+                    Eine sortierte Liste nummeriert die Einträge automatisch.
+                </p>
+
+                <h3>Beispiel (Inhaltsverzeichnis):</h3>
+                <ol>
+                    <li>Grundaufbau eines Links </li>
+                    <li>Das Attribut href</li>
+                    <li>Link in einem neuen Tag öffnen</li>
+                    <li>E-Mail und Telefon Links</li>
+                    <li>Interne Links (Sprungmarken)</li>
+                </ol>
+
+                <h3>Wichtige Attribute</h3>
+
+                <ul>
+                    <li><strong>type</strong>: 1, A, a, I, i</li>
+                    <li><strong>start</strong>: Startwert festlegen</li>
+                    <li><strong>reversed</strong>: Nummerierung umkehren</li>
+                </ul>
+
+                <h3>Beispiel (Tiere):</h3>
+                <ol type="A">
+                    <li>Hund</li>
+                    <li>Katze</li>
+                    <li>Kuh</li>
+                    <li>Meerschweinchen</li>
+                    <li>Pinguin</li>
+                </ol>
+
+                <ol type="I" start="100">
+                    <li>Hund</li>
+                    <li>Katze</li>
+                    <li>Kuh</li>
+                    <li>Meerschweinchen</li>
+                    <li>Pinguin</li>
+                </ol>
+
+                <ol type="a" start="16" reversed>
+                    <li>Hund</li>
+                    <li>Katze</li>
+                    <li>Kuh</li>
+                    <li>Meerschweinchen</li>
+                    <li>Pinguin</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>3. Unsortierte Liste (&lt;ul&gt;)</h2>
+                <p>
+                    Eine unsortierte Liste stellt Aufzählungen dar, bei der die Reihenfolge egal ist.
+                </p>
+
+                <h3>Beispiel (Städte):</h3>
+                <ul>
+                    <li>München</li>
+                    <li>Rom</li>
+                    <li>Nürnberg</li>
+                </ul>
+
+                <h3>Wichtige Attribute</h3>
+                <ul>
+                    <li><strong>type</strong>: none, circle, square</li>
+                </ul>
+
+                <h3>Beispiel (Städte):</h3>
+                <ul type="square">
+                    <li>Madrid</li>
+                    <li>Bangkok</li>
+                    <li>London</li>
+                </ul>
+
+                <ul type="circle">
+                    <li>Madrid</li>
+                    <li>Bangkok</li>
+                    <li>London</li>
+                </ul>
+
+                <ul type="none">
+                    <li>Madrid</li>
+                    <li>Bangkok</li>
+                    <li>London</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Beschreibende Listen (&lt;dl&gt; = Description List)</h2>
+
+                <p>
+                    Eine beschreibende Liste besteht aus: <strong>&lt;dt&gt;</strong> (Term = Begriff)
+                    und <strong>&lt;dd&gt;</strong> (Description = Beschreibung).
+                </p>
+
+                <h3>Besipiel (Begriffe aus der IT):</h3>
+
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>Auszeichnungssprache zur Strukturierung von Webseiten.</dd>
+                </dl>
+
+                <dl>
+                    <dt>CSS</dt>
+                    <dd>Sprache für das Design und Layout der Webseite.</dd>
+                </dl>
+
+                <h3>Mehrere Beschreibungen für einen Begriff</h3>
+                <dl>
+                    <dt>Dackel</dt>
+                    <dd>Hunderasse</dd>
+                    <dd>Gilt als schlau, lernfähig und stur.</dd>
+                </dl>
+            </section>
+
+            <section>
+                <h2>5. Verschachtelten Listem</h2>
+
+                <p>
+                    Listen können in anderen Listen eingebettet werden (Bsp.: Menüs und Kategorien).
+                </p>
+
+                <h3>Beispiel (Elektro Geräte):</h3>
+                <ul>
+                    <li>Produkte
+                        <ol>
+                            <li>Handys
+                                <ul>
+                                    <li>Androids</li>
+                                    <li>iOS</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+
+
+                <h3>Anleitung: Verschachtelte Listen in HTML</h3>
+                <ol>
+                    <li>Erstelle zuerst eine normale Liste mit &lt;ul&gt; oder &lt;ol&gt;</li>
+                    <li>Lege einen Listeneintrag mit &lt;li&gt; an</li>
+                    <li>Schreibe den Text für den Haupteintrag in dieses &lt;li&gt;</li>
+                    <li>Öffne innerhalb desselben &lt;li&gt; eine neue Liste (&lt;ul&gt; oder &lt;ol&gt;)</li>
+                    <li>Lege in dieser neuen Liste die Unterpunkte mit &lt;li&gt; an</li>
+                    <li>Schließe zuerst die Unterliste und danach das äußere &lt;li&gt;</li>
+
+                </ol>
+            </section>
+        </main>
+    </body>
+</html>

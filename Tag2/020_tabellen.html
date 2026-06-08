@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabellen in HTML</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Tabellen in HTML</h1>
+
+            <p>
+                Tabellen helfen uns dabei, Date übersichtlicher in Zeile und Spalten darzustellen.
+                Die wichsten Bausteine sind:
+            </p>
+
+            <ul>
+                <li><strong>&lt;table&gt;</strong> = die Tabelle (Rahmen/ Container)</li>
+                <li><strong>&lt;tr&gt;</strong> = die Tabellenzeile (table row)</li>
+                <li><strong>&lt;td&gt;</strong> = eine Datenzelle (table data)</li>
+                <li><strong>&lt;th&gt;</strong> = eine Überschrift für eine Zelle (table header)</li>
+            </ul>
+        </header>
+
+        <main>
+            <section>
+                <h2>1. Einfache Tabelle</h2>
+
+                <table border="2">
+                    <caption>Beispiel: Tiere</caption>
+                    <tr>
+                        <th>Tier</th>
+                        <th>Art</th>
+                        <th>Zähne</th>
+                    </tr>
+                    <tr>
+                        <td>Hund</td>
+                        <td>Säugetier</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>Katze</td>
+                        <td>Säugetier</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Biber</td>
+                        <td>Säugetiere</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Kuh</td>
+                        <td>Säugetier</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>Piranha</td>
+                        <td>Fisch</td>
+                        <td>24-28</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>2. Tabellen mit Kopf-, Köper- und Fußbereich</h2>
+
+                <dl>
+                    <dt><strong>&lt;thead&gt;</strong> = Kopfbereich (Table Head)</dt>
+                    <dd>Hier steht die Überschrift der Tabelle (Spaltennamen).</dd>
+                </dl>
+
+                <dl>
+                    <dt><strong>&lt;tbody&gt;</strong> = Hauptteil (Table Body)</dt>
+                    <dd>Hier stehen die eigentlichen Daten, also die Informationen, die angezeigt werden sollen.</dd>
+                </dl>
+
+                <dl>
+                    <dt><strong>&lt;tfoot&gt;</strong> = Fußbereich (Table Foot)</dt>
+                    <dd>Hier stehen die zusammengefassten oder ergänzenden Informationen, zu unserer Tabelle. Bsp.: Summe, Fazit oder ein Hinweis.</dd>
+                </dl>
+
+                <table border="1">
+                    <caption>Einkaufsliste von Yoda</caption>
+
+                    <thead>
+                        <tr>
+                            <th>Produkte</th>
+                            <th>Preis</th>
+                            <th>Menge</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Apfel</td>
+                            <td>0,50€</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Brot</td>
+                            <td>2,00€</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td>Summe</td>
+                            <td colspan="2">9,00€</td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+                
+                <dl>
+                        <dt>colspan = über mehrere Spalten verteilt (eng. column span)</dt>
+                        <dd>Sagt dem Browser, dass eine Tabellenzelle den Platz von mehreren Spalten einnehmen soll.</dd>
+                    </dl>
+            </section>
+        </main>
+    </body>
+</html>
