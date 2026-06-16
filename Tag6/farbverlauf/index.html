@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <title>Farbveräufe in CSS</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>CSS Farbveräufe (Gradients)</h1>
+            <p>
+                Mit CSS kannst du Farbverläufe als Hintergrund verwenden.
+                Farbverläufe sind <strong>keine Bilder</strong>, sondern werden direkt in CSS erzeugt.
+            </p>
+        </header>
+
+        <main>
+            <h2>Die wichtigsten Farbverläufe:</h2>
+
+            <ol>
+                <li><strong>Linear Gradient</strong> = Verlauf in eine Richtung</li>
+                <li><strong>Radial Gradient</strong> = Verlauf von der Mitte nach außen</li>
+                <li><strong>Conic Gradient</strong> = kreisförmiger Verlauf</li>
+            </ol>
+
+            <section>
+                <h3>1. Linear Gradient <code>linear-gradient</code></h3>
+
+                <p>
+                    Ein linearer Verlauf, geht in eine Richtung (z.B.: von oben nach unten).
+                </p>
+
+                <div class="linear-gradient box">
+                    linear-gradient (oben nach unten)
+                </div>
+
+                <pre>
+                    <code>
+                        .linear-gradient{
+                            background: linear-gradient(#00a8ff, crimson);
+                        }
+
+                        -> #00a8ff = obere Farbe des Farbverlaufes
+                        -> crimson = untere Farbe des Farbevrlaufes
+                    </code>
+                </pre>
+
+                <p>
+                    Du kannst auch eine Richtung angeben:
+                </p>
+
+                <div class="linear-direction box">
+                    linear-gradient (nach links)
+                </div>
+
+                <pre>
+                    <code>
+                        .linear-direction{
+                            background: linear-gradient(to left, #6465a5, #f05837);
+                        }
+
+                        -> #6465a5 -> ist die erste Farbe und liegt rechts
+                        -> #f05837 -> zweite Farbe und liegt links 
+                        -> nach "to" kommt die Richtung, in die es Verlaufen soll
+                    </code>
+                </pre>
+
+                <p>
+                    Wir können auch einen Winkel benutzen:
+                </p>
+
+                <div class="linear-angle circle">
+                    linear-gradient(350deg)
+                </div>
+
+                <pre>
+                    <code>
+                        .linear-angle{
+                            background: linear-gradient(350deg, #00743f, #f2a104);
+                        }
+
+                        -> zahl+deg = gibt den Winkel an, der genutzt werden soll
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h3>2. Radial Gradient (radial-gradient)</h3>
+
+                <p>
+                    Der Farbverlauf geht von der Mitte nach außen (kreisförmig).
+                </p>
+
+                <div class="radial-basic box">
+                    radial-gradient (Standard)
+                </div>
+
+                <pre>
+                    <code>
+                        .radial-basic{
+                            background: radial-gradient(circle, #c0334d, #f1931b);
+                        }
+
+                        -> circle wel es kreisförmig sein soll
+                    </code>
+                </pre>
+
+                <p>
+                    Du kannst die Form beeinflussen:
+                </p>
+
+                <div class="radial-ellipse box">
+                    radial-gradient (ellipse)
+                </div>
+
+                <pre>
+                    <code>
+                        .radial-ellipse{
+                            background: radial-gradient(ellipse, #212027, #f22f08);
+                        }
+
+                        -> ellipse weil es ellipsenförmig ist
+                    </code>
+                </pre>
+
+                <p>
+                    Du kannst den Mittelpunkt verschieben:
+                </p>
+
+                <div class="radial-move box">
+                    radial-gradient (verschiebung Mittelpunkt oben Links)
+                </div>
+
+                <pre>
+                    <code>
+                        .radial-move{
+                            background: radial-gradient(circle at top left, #8e3ccb, #87c830);
+                        }
+
+                        -> #8e3ccb = hier beginnt der Kreis in der oberen linken Ecke (1/4 Kreis ist sichtbar)
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h3>3. Conic Gradient (conic-gradient)</h3>
+
+                <p>
+                    Ein conic-gradient ist ein kreisförmiger Verlauf um einen Mittelpunkt.
+                    Er eignet sich gut für z.B.: Diagramme und Deko.
+                </p>
+
+                <div class="conic-basic box">
+                    conic-gradient (Standard)
+                </div>
+
+                <pre>
+                    <code>
+                        .conic-basic{
+                            background: conic-gradient(#003d73, #1ecfd6, #edd170, #c05640);
+                        }
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h3>4. Mehrere Farben und Farbstopps</h3>
+
+                <p>
+                    Du kannst mehr als nur zwei Farben benutzen und auch Prozentwerte
+                    (Stopps) angeben.
+                </p>
+
+                <div class="linear-stopps box">
+                    Mehrere Farbstopps
+                </div>
+
+                <pre>
+                    <code>
+                        .linear-stopps{
+                            background: linear-gradient(to right,
+                                #8a8604 0%,
+                                #383140 50%,
+                                #cac7d7 100%);
+                        }
+                    </code>
+                </pre>
+            </section>
+
+        </main>
+    </body>
+</html>

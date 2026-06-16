@@ -1,0 +1,193 @@
+/*Universalselektor*/
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    box-sizing: border-box; /* box sizing bestimmt, wie die Größe des Elements berechnet wird | 
+                                border-box = Inhalt wird automatisch kleiner berechnet (Bsp.: width: 200px -> genau 200px)*/
+    padding: 0;
+    margin: 0;    
+}
+
+/*Elementselektor*/
+body{
+    background: linear-gradient(to bottom, #dbeafe, #f8fbff);
+    color: #1f2937;
+}
+
+/* Elementselektor -> header*/
+header{
+    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+    color: white;
+    text-align: center; /* text-align= Ausrichtung des Textes | center = zentriert*/
+    padding: 4rem 1.5rem 3rem; /*rem = relativ zum Root Element | 
+    4rem = oben / 1.5rem = rechts und links / rem = unten */
+    box-shadow: 0 10px 30px rgb(15, 23, 42);    /* box-shadow = Schatten des "Rahmen"*/
+}
+
+/*Elementselektor -> main*/
+main{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+}
+
+/*Elementselektor -> sections */
+section{
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;    /* damit kann ich die Ecken abrunden */
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.3);
+    margin-bottom: 2rem;
+}
+
+
+/*Elementselektor -> h2*/
+h2{
+    font-size: 1.8rem;  /* legen Schriftgröße fest*/
+    margin-bottom: 1.5rem;
+    color: #1d4ed8;
+    border-left: #2563eb solid 6px;
+    padding-left: 0.8rem;
+    text-decoration: underline; /* Überschrift unterstrichen durch underline*/
+}
+
+/*Elementselektor -> h3*/
+h3{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/*Elementselektor -> article*/
+article{
+    background: linear-gradient(to bottom right, #eff6ff, #60a5fa);
+    border: 1px solid #dbe3ef;
+    border-left: 6px solid #2563eb;
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/*Elementselektor -> code*/
+code{
+    font-family: 'Fire Code', monospace;
+    color: #b91c1c;
+    padding: 0.2rem 0.45rem;
+    font-size: 0.9rem;
+}
+
+/*Elementselektor -> pre*/
+pre{
+    margin-top: 1rem;
+    background-color: #0f172a;
+    border-radius: 12px;
+    overflow-x: auto;
+}
+
+/*Klassenselektor */
+.wichtig{
+    color: deeppink;
+}
+
+/*ID-Selektor*/
+#wichtig{
+    color: magenta;
+    text-decoration: underline;
+}
+
+/*Gruppenselektor */
+h2,h3 {
+    color: #b91c1c;
+}
+
+/*Nachfahreselektor header h1 */
+header h1{
+    font-size: clamp(2rem, 5vw, 3.2rem); /* Schrift soll mitwachsen -> clamp(Min, Ideal, Max) => Schrift soll niemals 
+                                            kleiner sein als 2 rem! vw = viewport width | vh = viewort height
+                                            vw => Breite des sichtbaren Browserfensters
+                                            5vw = 5% der Breite = 50px
+                                            vw -> kann höchstens 100vw sein = 1000px = 100% der Breite*/
+    margin-bottom: 1rem;
+    font-weight: 700;           /* verändert die Stärke der Schrift (100-900) -> 700 = bold*/
+}
+
+/*Nachfahreselektor header p*/
+header p{
+    max-width: 800px;
+    margin: 0 auto; /* 0 -> unten und oben | auto -> brechnet links und rechts Platz automatisch
+                    damit er gleich bleibt */
+    font-size: 1.05rem;
+    color: rgba(255, 255 ,255 , 0.9);
+}
+
+/*Nachfahreselektor article p*/
+article p{
+    margin-bottom: 0.8rem;
+}
+
+/*Nachfahreselektor article strong*/
+article strong{
+    color: #1d4ed8;
+}
+
+/*Nachfahreselektor pre code*/
+pre code{
+    display: block;
+    padding: 1rem 0;
+    color: yellowgreen;
+    font-size: 1rem;
+    transform: translateX(-10rem);  /* wenn man Elemente optisch an der X-Achse verschieben möchte)*/
+}
+
+/* Kindselektor article > h3 */
+article > h3{
+    color: darkgreen;
+    text-decoration: underline;
+}
+
+/* Direkter Nachbarselektor h1 + p */
+h1 + p {
+    color: seashell;
+}
+
+/*Allgemeiner Geschwisterselektor h3 ~ p */
+h3 ~ p{
+    color:rgb(22, 9, 104);
+}
+
+/*Tabelle*/
+
+table{
+    width: 100%;
+    border-collapse: collapse; /* Zieht die benachbarten Ränder zusammen -> 
+                                    also aus mehreren Linien wird eine!*/
+    border-radius: 14px;
+    overflow: hidden; /*Alles was aus dem Element herausragt, soll abgeschnitten
+                        bzw. versteckt werden*/
+    background-color: rgb(186, 213, 240);
+}
+
+thead{
+    background: linear-gradient(135deg, #1e293b, #334155);
+    color: white;
+}
+
+th{
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.95rem;
+}
+
+td{
+    padding: 1rem;
+    border-bottom: 1px solid #dbe3ef;
+}
+
+tbody tr:nth-child(even){   /*typisch für Tabellen styling -> es 
+    werden alle geraden Kinder der Tabelle angesprochen (jede zweite Zeile) */
+    background-color: #dbe3ef;
+}
+
+tbody tr:hover{
+    background-color: rgb(69, 214, 239);
+    transition: 0.3s;
+}

@@ -1,0 +1,76 @@
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    padding: 12px 5px;
+}
+
+code {
+    font-family: monospace;
+}
+
+.box{
+    height: 280px;
+    margin: 12px 0;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    display: flex; /*macht unser Layout flexibel*/
+    justify-content: center; /*schiebe das ganze von recht/links in die Mitte*/
+    align-items: center; /* schiebe das ganze von oben/unten in die Mitte*/
+}
+
+.circle{
+    height: 280px;
+    width: 280px;
+    margin: 12px 0;
+    border-radius: 50%;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    display: flex; /*macht unser Layout flexibel*/
+    justify-content: center; /*schiebe das ganze von recht/links in die Mitte*/
+    align-items: center;
+}
+
+/*Linear Gradient -> eine Richtung*/
+.linear-gradient{
+    background: linear-gradient(#00a8ff, crimson);
+}
+
+/*Linear Gradient -> nach links */
+.linear-direction{
+    background: linear-gradient(to left, #6465a5, #f05837);
+}
+
+/*Linear Gradient -> Winkel*/
+.linear-angle{
+    background: linear-gradient(350deg, #00743f, #f2a104);
+}
+
+/*Radial Gradient -> Standard */
+.radial-basic{
+    background: radial-gradient(circle, #c0334d, #f1931b);
+}
+
+/*Radial Gradient -> Ellipse*/
+.radial-ellipse{
+    background: radial-gradient(ellipse, #212027, #f22f08);
+}
+
+/*Radial Gradient -> verschiebung Mittelpunkt oben Links*/
+.radial-move{
+    background: radial-gradient(circle at top left, #8e3ccb, #87c830);
+}
+
+/* Conic Gradient -> um einen Mittelpunkt */
+.conic-basic{
+    background: conic-gradient(#003d73, #1ecfd6, #edd170, #c05640);
+}
+
+/*Mehrere Farbstopps */
+.linear-stopps{
+    background: linear-gradient(to right,
+        #8a8604 0%,
+        #383140 50%,
+        #cac7d7 100%);
+}

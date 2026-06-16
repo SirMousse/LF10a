@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Externes CSS -->
+        <link rel="stylesheet" href="./style.css">
+        
+        <title>CSS einbinden</title>
+
+
+        <!-- Internes CSS-->
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                line-height: 1.5;
+            }
+
+            .intern{
+                margin: 0;
+                color: darkgreen;
+                background-color: #e6ffe6;
+                padding: 4px;
+                
+            }
+
+            .box{
+                border: 2px black solid;
+                padding: 10px;
+                margin: 10px 0;
+            } 
+        </style>
+
+
+
+    </head>
+    <body>
+        <header>
+            <h1>CSS einbinden - Inline, Intern und Extern</h1>
+
+            <p>Es gibt drei Arten, CSS in HTML einzubinden:</p>
+
+            <ol>
+                <li><strong>Inline CSS</strong> = direkt im HTML geschrieben</li>
+                <li><strong>Interne CSS</strong> = im &lt;style&gt;-Tag im head geschrieben</li>
+                <li><strong>Externe CSS</strong> = in einer .css Datei angelegt</li>
+            </ol>
+        </header>
+
+        <main>
+            <section>
+                <h2>1. Inline CSS</h2>
+
+                <p>
+                    Inline CSS wird direkt im HTML Tag mit dem Attribut <code>style</code> geschrieben!
+                </p>
+
+                <p style="color: crimson; background-color:antiquewhite; padding: 8px;">
+                    Dieser Text ist mit Inline CSS gestylt.
+                </p>
+
+                <pre>
+                    &lt;p style="color: crimson;                -> color = Farbe der Schrift
+                            background-color:antiquewhite;      -> background-color = ist die Hintergrundfarbe
+                            padding: 8px;"&gt;                  -> padding = ist der Innenabstand (Platz zwischen dem Inhalt eines Elements und seinem Rand)
+
+                            Farben können in englischen Namen, hex Werten oder aber RGB dargestellt werden!
+                </pre>
+
+                <p>
+                    <strong>Wann ist das sinnvoll?</strong> Fast nie. Nur für schnelle Test oder einzelne Ausnahmen. <br>
+                    <strong>Warum ist das schlecht?</strong> Unübersichtlich und sehr schlecht wartbar.
+                </p>
+            </section>
+
+            <section>
+                <h2>2. Internes CSS (im &lt;style&gt;-Tag)</h2>
+
+                <p>
+                    Internes CSS steht im &lt;style&gt;-Tag der HTML Datei. Es gilt für die gesamte Seite!
+                </p>
+
+                <article class="box intern">
+                    <p>
+                        Dieser Bereich ist mit internem CSS gestylt.
+                    </p>
+                </article>
+
+                <pre>
+                    &lt;style&gt;
+                        Selektor {
+                            eigenschaft: wert;
+                        }
+
+
+                        body{
+                            font-family: Arial, Helvetica, sans-serif;          -> bestimmt die Schriftart
+                            line-height: 1.5;                                   -> bestimmt den Zeilenabstand
+                        }
+
+                        .intern{                                       
+                            color: darkgreen;               -> color = Farbe der Schrift
+                            background-color: #e6ffe6;      -> background-color = ist die Hintergrundfarbe
+                            padding: 4px;                   -> Innenabstand
+                            
+                        }
+
+                        .box{
+                            border: 2px black solid;        -> border ist der Rahmen | 2px ist die Rahmenstärke | black ist die Rahmenfarbe | solid ist die feste/ darstellung des Rahmens
+                            padding: 10px;                  -> Innenabstand
+                            margin: 10px 0;                 -> margin = Außenabstand (oben, rechts, unten, links) | 10px stehen für oben + unten & 0 steht für rechts und links
+                        } 
+                    &lt;/style&gt;
+                </pre>
+
+                <p>
+                    <strong>Wann ist es sinnvoll?</strong> Bei kleineren Projekten und Übungen. <br>
+                    <strong>Warum?</strong> Alles in einer Datei ist und es damit leichter zu verstehen ist.
+                </p>
+            </section>
+
+            <section>
+                <h2>3. Externe CSS (seperate Datei)</h2>
+
+                <p>
+                    Externe CSS liegt in einer eigenen Datei (z.B.: <code>styles.css</code>) und wird mit 
+                    einem &lt;link&gt;-Tag eingebunden.
+                </p>
+
+                <article class="box extern">
+                    <p>
+                        Dieser Bereich ist mit einem externen CSS gestylt wurden.
+                    </p>
+                </article>
+
+                <pre>
+                    .extern{
+                        color: antiquewhite;            -> Farbe der Schrift
+                        background-color: #3333cc;      -> Hintergrundfarbe
+                        padding: 10px;                  -> Innenabstand
+                    }
+                </pre>
+
+                <p>
+                    <strong>Wann ist es sinnvoll?</strong> Fast immer bei "echten" Webseiten! <br>
+                    <strong>Warum?</strong> Sauber, wiederverwendbar und leicht wartbar.
+                </p>
+            </section>
+
+            <section>
+                <h2>4. Priorität und Reihenfolge</h2>
+
+                <p>
+                    Wenn mehrere Styles auf das selbe Element wirken, gilt:
+                </p>
+
+                <ol>
+                    <li>Inline CSS (höchste Priorität)</li>
+                    <li>Interne CSS</li>
+                    <li>Externes CSS (niedrigste Priorität)</li>
+                </ol>
+
+                <p>
+                    Bsp.: der folgende Text hat alle drei Arten von CSS:
+                </p>
+
+                <p class="extern intern" style="color: purple;">
+                    Welche Farbe sehe ich?
+                </p>
+            </section>
+        </main>
+    </body>
+</html>
